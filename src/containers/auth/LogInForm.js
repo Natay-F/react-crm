@@ -61,7 +61,8 @@ export const LogInForm = () => {
       fetchData(`${OrgUrl}/`, 'GET', null, OrgHeaders)
         .then((data) => {
           if (!data.error) {
-            localStorage.setItem('org', data.profile_org_list[0].org.id)
+            console.log(data)
+            // localStorage.setItem('org', data.profile_org_list[0].org.id)
             navigate('/leads')
           }
         })
